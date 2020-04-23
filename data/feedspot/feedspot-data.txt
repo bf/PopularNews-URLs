@@ -1,0 +1,2 @@
+https://api.feedspot.com/v1//blogpost.json?burl=https%3A%2F%2Fblog.feedspot.com%2Fusa_news_websites%2F&_=1587646456687
+jq ".data[].link.text" feedspot-top100-usa-news-websites-16Apr2020.json -r | sort | cut -d "/" -f 1 | wc -l
