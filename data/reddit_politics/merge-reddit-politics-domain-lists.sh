@@ -16,7 +16,7 @@ for file in $(ls *.csv); do
 		fi;
 	done;
 
-	tail -n +2 $file | cut -f $((index+1)) | cut -d '/' -f 1 | sort | uniq > "$file.domains.txt";
+	tail -n +2 $file | cut -f $((index+1)) | cut -d '/' -f 1 | sort | uniq | awk 'NF' > "$file.domains.txt";
 done
 
 # merge all domain files into one
