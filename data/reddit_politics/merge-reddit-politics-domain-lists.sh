@@ -20,4 +20,4 @@ for file in $(ls *.csv); do
 done
 
 # merge all domain files into one
-cat *.domains.txt | sort | uniq > ../../output/reddit-politics.txt
+cat *.domains.txt | sort | uniq > ../../output/temp/reddit-politics.domains.txt
