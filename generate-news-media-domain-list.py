@@ -23,6 +23,8 @@ for filename in arr_domain_lists:
   for entry in lines:
     tld_meta = tldextract.extract(entry)
     domain = tld_meta.registered_domain
+
+    domain = domain.lower()
   
     if entry != domain:
       print("\t", entry, "\n\t -> ", domain)
